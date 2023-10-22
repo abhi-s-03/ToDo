@@ -1,0 +1,257 @@
+#root,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #14ccd5;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.dashboard {
+  background-color: #dae9ec;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu,
+.viewtask {
+  margin: 1.5%;
+  height: 88%;
+  width: 22%;
+  background-color: rgb(193, 237, 242);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.footer,
+.lists {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 10px 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+li svg,
+label svg {
+  margin-right: 10px;
+}
+
+.footer {
+  position: relative;
+  top: -10px;
+  margin-top: auto;
+}
+
+.footer label {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+input,
+button {
+  height: 2rem;
+  border: 0;
+  background-color: white;
+}
+
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  padding: 0 1.6rem;
+  margin-top: 1rem;
+  transition: all .4s ease;
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+
+.header button {
+  display: none;
+  position: relative;
+  width: 2.5rem;
+  font-weight: bold;
+  background: #57bd84;
+  top: 8px;
+  border-radius: 0 .7rem .7rem 0;
+}
+
+.header input:not(:placeholder-shown) {
+  width: calc(100% - 2.5rem);
+
+  +button {
+    display: block;
+  }
+}
+
+.mag {
+  position: absolute;
+  top: 21.5%;
+  padding-left: 2px;
+  z-index: 2;
+}
+
+.details {
+  height: 95%;
+  margin: 1.5% 0;
+  flex-grow: 1;
+}
+
+.visible {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+.close-button {
+  width: 15px;
+  background-color: rgb(193, 237, 242);
+  color: red;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top {
+  margin-bottom: 10px;
+}
+
+.taskarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.intext {
+  margin: 5px 0;
+}
+
+#des {
+  margin-bottom: 10px;
+}
+
+#list {
+  margin-right: 15px;
+}
+
+#date {
+  margin-left: 10px;
+}
+
+#category {
+  border: 0;
+  background-color: white;
+  width: 115px;
+  height: 33px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.sub {
+  width: fit-content;
+  background-color: rgb(8, 148, 235);
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buttons button {
+  width: 80px;
+  color: white;
+  border-radius: 5px;
+}
+
+#del {
+  background-color: red;
+}
+
+#save {
+  background-color: green;
+}
+
+.line {
+  height: 2px;
+  width: 400px;
+  background-color: grey;
+}
+
+.newtask {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.newtask span {
+  margin-left: 10px;
+}
