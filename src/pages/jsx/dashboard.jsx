@@ -153,6 +153,15 @@ function Dashboard() {
     navigate("/");
   };
 
+  const todayTasks = tasks.filter(
+    (task) => task.dueDate === new Date().toISOString().slice(0, 10)
+  );
+  const upcomingTasks = tasks
+    .filter(
+      (task) => task.dueDate > new Date().toISOString().slice(0, 10)
+    )
+    .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+
   return (
     <>
       <div className="app">
@@ -235,7 +244,7 @@ function Dashboard() {
                 </button>
                 <div className="newtask">
                   <TaskList
-                    tasks={tasks}
+                    tasks={todayTasks}
                     handleTaskClick={handleTaskClick}
                     del={del}
                   />
@@ -250,7 +259,7 @@ function Dashboard() {
                 </button>
                 <div className="newtask">
                   <TaskList
-                    tasks={tasks}
+                    tasks={upcomingTasks}
                     handleTaskClick={handleTaskClick}
                     del={del}
                   />
